@@ -13,6 +13,8 @@
 		AB5D95ED1FC27605002EA727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5D95EC1FC27605002EA727 /* Assets.xcassets */; };
 		AB5D95F01FC27605002EA727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5D95EE1FC27605002EA727 /* LaunchScreen.storyboard */; };
 		AB5D95F31FC27605002EA727 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5D95F21FC27605002EA727 /* main.m */; };
+		AB5D96291FC2B7AB002EA727 /* CustomQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5D96281FC2B7AB002EA727 /* CustomQRCode.m */; };
+		AB5D962C1FC2DC5F002EA727 /* CustomCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5D962B1FC2DC5F002EA727 /* CustomCover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		AB5D95EF1FC27605002EA727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5D95F11FC27605002EA727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5D95F21FC27605002EA727 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB5D96271FC2B7AB002EA727 /* CustomQRCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomQRCode.h; sourceTree = "<group>"; };
+		AB5D96281FC2B7AB002EA727 /* CustomQRCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomQRCode.m; sourceTree = "<group>"; };
+		AB5D962A1FC2DC5F002EA727 /* CustomCover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCover.h; sourceTree = "<group>"; };
+		AB5D962B1FC2DC5F002EA727 /* CustomCover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCover.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				AB5D95EE1FC27605002EA727 /* LaunchScreen.storyboard */,
 				AB5D95F11FC27605002EA727 /* Info.plist */,
 				AB5D95F21FC27605002EA727 /* main.m */,
+				AB5D96271FC2B7AB002EA727 /* CustomQRCode.h */,
+				AB5D96281FC2B7AB002EA727 /* CustomQRCode.m */,
+				AB5D962A1FC2DC5F002EA727 /* CustomCover.h */,
+				AB5D962B1FC2DC5F002EA727 /* CustomCover.m */,
 			);
 			path = ImgCompose;
 			sourceTree = "<group>";
@@ -143,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5D95E81FC27605002EA727 /* ViewController.m in Sources */,
+				AB5D962C1FC2DC5F002EA727 /* CustomCover.m in Sources */,
 				AB5D95F31FC27605002EA727 /* main.m in Sources */,
+				AB5D96291FC2B7AB002EA727 /* CustomQRCode.m in Sources */,
 				AB5D95E51FC27605002EA727 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,11 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImgCompose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.m1989.ImgCompose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -291,11 +306,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImgCompose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.m1989.ImgCompose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
