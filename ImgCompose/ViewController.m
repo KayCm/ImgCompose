@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomQRCode.h"
+#import "ViewController2.h"
 @interface ViewController ()
 @property(nonatomic,strong)NSMutableArray *ImgStyle;
 @property(nonatomic,strong)UIImageView *img;
@@ -24,14 +25,31 @@
 //
     [_ImgStyle addObject:@{@"Type":@"bg",@"content":@"http://static.yoro.com/res/26bc5014b392411b822f35956dbd6e82"}];
     [_ImgStyle addObject:@{@"Type":@"img",@"content":@"http://static.yoro.com/res/ecdc22faee354210835aba3333bb723f",@"position":@[@0,@0,@750,@442]}];
-    [_ImgStyle addObject:@{@"Type":@"txt",@"content":@"测试123ABC",@"position":@[@100,@100,@200,@200],@"color":@"#000000",@"size":@"30"}];
+    [_ImgStyle addObject:@{@"Type":@"txt",@"content":@"测试123ABC",@"position":@[@100,@100,@200,@200],@"color":@"#123000",@"size":@"60"}];
     [_ImgStyle addObject:@{@"Type":@"qr",@"content":@"http://koubei.rosepie.com/diary/index?u=1217859&s=1043190&d=1511163113&t=1",@"position":@[@500,@1200,@100,@100],@"color":@"FF6464",@"size":@"100"}];
     
     _img = [[UIImageView alloc] initWithFrame:self.view.bounds];
     
+
     [self.view addSubview:_img];
 
     [self MakeCoverWithStyleArr:[_ImgStyle copy]];
+    
+    UIButton *A = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+    
+    A.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:A];
+    
+    [A addTarget:self action:@selector(goNext) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+-(void)goNext{
+    
+    ViewController2 *v2 = [ViewController2 new];
+    
+    [self.navigationController pushViewController:v2 animated:YES];
     
 }
 
